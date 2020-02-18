@@ -40,3 +40,4 @@ with tf.Session() as sess:
     if itr % 100 == 0:
       prediction = sess.run(result, {x: [[1, 0]]})
       print('Epoch %d done. Loss=%.6f Prediction=%.6f' % (itr, loss_val, prediction))
+print 'TensorFlow'
