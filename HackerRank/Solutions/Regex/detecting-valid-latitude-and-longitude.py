@@ -27,4 +27,4 @@ for i in range(t):
             print("Invalid")
     except:
         print("Invalid")
-© 2020 GitHub, Inc.
+
