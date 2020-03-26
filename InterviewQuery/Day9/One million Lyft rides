@@ -1,0 +1,4 @@
+This question was asked by: Lyft
+Let's say we have 1 million Lyft rider journey trips in the city of Seattle. We want to build a model to predict ETA after a rider makes a Lyft request.
+
+How would we know if we have enough data to create an accurate enough model?
