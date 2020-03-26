@@ -1,0 +1,5 @@
+This question was asked by: Square
+Let's say that you work at a bank that wants to build a model to detect fraud on the platform. The bank wants to implement a text messaging service in addition that will text customers when the model detects a fradulent transaction in order for the customer to approve or deny the transaction with a text response.
+
+1. What kind of model would need to be built?
+2. Given the scenario, if you were building the model, which model metrics would you be optimizing for?
