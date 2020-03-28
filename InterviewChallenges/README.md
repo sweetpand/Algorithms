@@ -167,3 +167,7 @@ You are given a specific case and you need to give a solution for the problem.
 
 ### Pandas
 1. Use Pandas to manipulate data.
+
+
+
+https://github.com/AllenCX/awesome-computer-vision
