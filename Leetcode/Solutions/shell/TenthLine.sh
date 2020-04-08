@@ -1,6 +1,4 @@
 # Source : https://leetcode.com/problems/tenth-line/
-# Author : Hao Chen
-# Date   : 2015-03-31
 
 ################################################################################## 
 # 
