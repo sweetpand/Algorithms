@@ -1,0 +1,2 @@
+Given an array of integers find the maximum value of a[i] - a[j] + a[k]
+with constraints i < j < k and a[i] < a[j] < a[k]
