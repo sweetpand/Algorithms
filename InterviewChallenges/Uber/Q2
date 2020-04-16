@@ -1,0 +1,7 @@
+There is a meeting scheduled in an office that lasts for time t and starts at time 0. In between the meeting there are n presentations whose start and end times are given i.e. the ith presentation starts at s[i] and ends at e[i]-1. The presentations do not overlap with each other. You are given k, the maximum number of presentations that you can reschedule keeping the original order intact. Note that the duration of the presentation can't be changed. You can only change the start and end time. Your task is to maximize the longest time period in which there is no presentation scheduled during the meeting.
+Constraints :-
+1<=t<=1, 000, 000, 000
+0<=k<=n
+1<=n<=100, 000
+e[i]<=s[i+1], 0<=i <n-1
+s[i] < e[i] for 0<=i<=n-1
