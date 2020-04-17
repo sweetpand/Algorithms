@@ -35,3 +35,34 @@ equations[i].length == 4
 equations[i][0] and equations[i][3] are lowercase letters
 equations[i][1] is either '=' or '!'
 equations[i][2] is '='
+
+
+Solution Explanation
+
+Intuition:
+We have 26 nodes in the graph.
+All "==" equations actually represent the connection in the graph.
+The connected nodes should be in the same color/union/set.
+
+Then we check all inequations.
+Two inequal nodes should be in the different color/union/set.
+
+Explanation
+We can solve this problem by DFS or Union Find.
+
+Firt pass all "==" equations.
+Union equal letters together
+Now we know which letters must equal to the others.
+
+Second pass all "!=" inequations,
+Check if there are any contradict happens.
+
+Time Complexity:
+Union Find Operation, amortized O(1)
+First pass all equations, O(N)
+Second pass all inequations, O(N)
+
+Overall O(N)
+
+
+
