@@ -8,8 +8,7 @@ Notice that the distance of a path connecting cities i and j is equal to the sum
 
 Example 1:
 
-
-
+dm
 Input: n = 4, edges = [[0,1,3],[1,2,1],[1,3,4],[2,3,1]], distanceThreshold = 4
 Output: 3
 Explanation: The figure above describes the graph. 
@@ -19,8 +18,9 @@ City 1 -> [City 0, City 2, City 3]
 City 2 -> [City 0, City 1, City 3] 
 City 3 -> [City 1, City 2] 
 Cities 0 and 3 have 2 neighboring cities at a distanceThreshold = 4, but we have to return city 3 since it has the greatest number.
-Example 2:
 
+
+Example 2:
 
 
 Input: n = 5, edges = [[0,1,2],[0,4,8],[1,2,3],[1,4,2],[2,3,1],[3,4,1]], distanceThreshold = 2
