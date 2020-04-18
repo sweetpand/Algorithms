@@ -31,3 +31,16 @@ Constraints:
 1 <= arr.length <= 5 * 10^4
 0 <= arr[i] < arr.length
 0 <= start < arr.length
+
+
+
+Solution Explanation
+
+Check 0 <= i < A.length
+flip the checked number to negative A[i] = -A[i]
+If A[i] == 0, get it and return true
+Continue to check canReach(A, i + A[i]) and canReach(A, i - A[i])
+
+Complexity
+Time O(N), as each number will be flipper at most once.
+Space O(N) for recursion.
