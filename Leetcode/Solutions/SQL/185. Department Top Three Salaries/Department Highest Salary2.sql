@@ -1,13 +1,27 @@
 # Write your MySQL query statement below
 
-# simple solution, easy to understand, but take time to run
-SELECT D.Name AS Department, E.Name AS Employee, E.Salary AS Salary
-FROM Employee E, Department D
-WHERE E.DepartmentId = D.Id
-AND E.Salary = (SELECT MAX(Salary) FROM Employee E2 WHERE E2.DepartmentId = D.Id)
-
-# another solution, looks complex, but run much faster
-SELECT D.Name AS Department, E.Name AS Employee, E.Salary AS Salary
-FROM Employee E, Department D,
-(SELECT Max(Salary) AS Max, DepartmentId FROM Employee GROUP BY DepartmentId) S
-WHERE E.DepartmentId = D.Id AND E.DepartmentId = S.DepartmentId AND E.Salary = S.Max
+select Department, Employee, Salary from (
+    select 
+    Department,
+    Employee,
+    a.Salary as Salary,
+    @department,
+    @rank:=if(
+        @department=a.DepartmentId, 
+        @rank+if(@salary=a.Salary,0,1),
+        1
+    ) as rank,
+    @department:=a.DepartmentId,
+    @salary:=a.Salary
+    from (select @rank:=0, @department:=-1, @salary:=-1) c, 
+    (
+        select a.DepartmentId,
+        b.Name as Department, a.Name as Employee,
+        a.Salary 
+        from Employee a
+        join Department b on (a.DepartmentId = b.Id)
+        order by a.DepartmentId, a.Salary desc
+    )a
+)a
+where rank<=3
+;
